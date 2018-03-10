@@ -8,5 +8,5 @@ mvn clean install -DskipTests=true
 ./launchUI.sh
 ```
 
-2. Click on "Open Log" and input "hotspot.log" (You can run "EscapeAnalysisTest.bash" to generate a hotspot log yourself )
-3. Click on "Config" and add "./src" in "Source locations" and add "./out" in "Class locations"
+2. Click on "Open Log" and input `hotspot.log` (You can run `EscapeAnalysisTest.bash` to generate a hotspot log yourself )
+3. Click on "Config" and add `./src` in "Source locations" and add `./out` in "Class locations"
