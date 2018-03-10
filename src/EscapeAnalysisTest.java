@@ -13,9 +13,12 @@ public class EscapeAnalysisTest {
             this.n = n;
         }
 
-        synchronized BigInteger getSum() {
+        synchronized final BigInteger getSum() {
             if (sum == null) {
-                sum = IntStream.rangeClosed(1, n).mapToObj(BigInteger::valueOf).reduce(BigInteger.ZERO, BigInteger::add);
+                sum = BigInteger.ZERO;
+                for (int i = 0; i < n; i++) {
+                    sum = sum.add(BigInteger.valueOf(i));
+                }
             }
             return sum;
         }

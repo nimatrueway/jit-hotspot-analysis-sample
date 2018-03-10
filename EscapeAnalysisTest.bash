@@ -13,3 +13,7 @@ EscapeAnalysisTest > /dev/null
 # Note: you need to first build hsdis [https://github.com/AdoptOpenJDK/jitwatch/wiki/Building-hsdis]
 #
 # -XX:+PrintAssembly \
+#
+# Add this to change size limit of a method's byte-codes for inlining
+#
+# -XX:MaxInlineSize=100 \
