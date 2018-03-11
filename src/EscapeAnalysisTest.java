@@ -28,9 +28,10 @@ public class EscapeAnalysisTest {
     public static void main(String[] args) {
         ArrayList<BigInteger> list = new ArrayList<>();
         for (int i = 1; i < 1000; i++) {
-            list.add(new Sum(i).getSum());
+            Sum sum = new Sum(i);
+            list.add(sum.getSum());
         }
-        list.forEach(System.out::println);
+        System.out.println(list.get(list.size() - 1));
     }
 
 }

@@ -6,6 +6,7 @@ java -cp "./out" \
 -verbose:gc \
 -XX:+UnlockDiagnosticVMOptions \
 -XX:+TraceClassLoading \
+-XX:MaxInlineSize=60 \
 -XX:+LogCompilation \
 EscapeAnalysisTest > /dev/null
 
