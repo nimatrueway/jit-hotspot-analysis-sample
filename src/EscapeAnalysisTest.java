@@ -25,13 +25,19 @@ public class EscapeAnalysisTest {
 
     }
 
-    public static void main(String[] args) {
+    private static void doTheJob() {
         ArrayList<BigInteger> list = new ArrayList<>();
-        for (int i = 1; i < 1000; i++) {
-            Sum sum = new Sum(i);
+        for (int i = 1; i < 10; i++) {
+            Sum sum = new Sum(i % 10);
             list.add(sum.getSum());
         }
         System.out.println(list.get(list.size() - 1));
+    }
+
+    public static void main(String[] args) {
+        for (int i = 1; i < 100_000; i++) {
+            doTheJob();
+        }
     }
 
 }

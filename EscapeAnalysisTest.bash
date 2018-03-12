@@ -6,8 +6,8 @@ java -cp "./out" \
 -verbose:gc \
 -XX:+UnlockDiagnosticVMOptions \
 -XX:+TraceClassLoading \
--XX:MaxInlineSize=60 \
 -XX:+LogCompilation \
+-XX:InlineSmallCode=4k \
 EscapeAnalysisTest > /dev/null
 
 # add this to get c1/c2 native assemblies too
